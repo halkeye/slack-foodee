@@ -38,6 +38,7 @@
     "express-session": "^1.14.1",
     "grant-express": "^3.6.4",
     "lodash.memoize": "^4.1.2",
+    "lodash.uniqby": "^4.7.0",
     "memoize": "^0.1.1",
     "moment": "^2.15.0",
     "moment-timezone": "^0.5.5",
