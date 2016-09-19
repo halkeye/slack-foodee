@@ -18,13 +18,15 @@ const nockFixtures = {
   goodOrders: () => {
     nock('https://www.food.ee')
       .get('/api/v2/orders')
-      .query({ page: 1, per_page: 25, when: 'future' })
+      .query(() => true)
+      .times(2)
       .replyWithFile(200, path.join(__dirname, 'fixtures/nock_foodee_orders_good.json'), { 'Content-Type': 'application/json' });
   },
   badOrders: () => {
     nock('https://www.food.ee')
       .get('/api/v2/orders')
-      .query({ page: 1, per_page: 25, when: 'future' })
+      .query(() => true)
+      .times(2)
       .replyWithFile(200, path.join(__dirname, 'fixtures/nock_foodee_orders_bad.json'));
   },
   goodOrder: () => {
@@ -140,7 +142,7 @@ describe('commands', function () {
           '*Person 5.*',
           'Boneless Curry Chicken (df,gf)',
           'Roti Canai (v)',
-        ].join('\n')
+        ].join('\n'),
       });
     });
   });
