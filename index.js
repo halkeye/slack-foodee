@@ -7,7 +7,7 @@ app.SLACK_TOKEN = process.env.SLACK_VERIFICATION_TOKEN;
 
 app.data.syncAll()
   .then(() => {
-    app.listen(proces.env.PORT || 3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log('Example app listening on port 3000!'); //eslint-disable-line
     });
   })
