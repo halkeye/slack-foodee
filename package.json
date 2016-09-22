@@ -43,6 +43,7 @@
     "moment": "^2.15.0",
     "moment-timezone": "^0.5.5",
     "morgan": "^1.7.0",
+    "mysql": "^2.11.1",
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
     "sequelize": "^3.24.3",
