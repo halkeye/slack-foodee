@@ -10,6 +10,7 @@
   "scripts": {
     "start": "async-node index.js",
     "dev": "nodemon --exec async-node -w index.js -w lib index.js",
+    "lint": "eslint .",
     "test": "mocha"
   },
   "repository": {
