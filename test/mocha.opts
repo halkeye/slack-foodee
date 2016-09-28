@@ -1,6 +1,5 @@
 --recursive
---require=env-test
---compilers js:babel-register
---require babel-polyfill
+--require env-test
+--require async-to-gen/register
 --require should
 --ui bdd
