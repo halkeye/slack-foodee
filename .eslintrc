@@ -9,6 +9,7 @@
   },
   "extends": "airbnb",
   "rules": {
+    "no-console": 0,
     "react/require-extension": 0,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
     "comma-dangle": ["error", "never"],

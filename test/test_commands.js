@@ -33,8 +33,9 @@ const nockFixtures = {
     nock('https://www.food.ee')
       .get('/api/v2/group_orders')
       .query({ uuid: 'db079f36-8365-4c65-96fd-5f4ad27a76af' })
+      .times(2)
       .replyWithFile(200, path.join(__dirname, 'fixtures/nock_foodee_order_good.json'), { 'Content-Type': 'application/json' });
-  },
+  }
 };
 
 
@@ -53,7 +54,7 @@ describe('commands', function () {
     this.req = {
       body: { team_id: 1, user_id: 1 },
       log: {},
-      data: db,
+      data: db
     };
     this.res = { };
     this.commands = new Commands(this.req, this.res);
@@ -109,12 +110,12 @@ describe('commands', function () {
     it('logged in and return so', async function () {
       nockFixtures.goodSignin();
       nockFixtures.badOrders();
-      this.req.foodee_user = { username: 'gavin', password: 'password' };
+      this.req.foodee_user = { username: 'gavin', password: 'password', token: 'something', email: 'yo@yo.com' };
 
-      const results = await this.commands.date('2016-09-19');
+      const results = await this.commands.date('2015-09-19');
       results.should.eql({
         response_type: 'ephemeral',
-        text: 'No orders for 2016-09-19',
+        text: 'No orders for 2015-09-19'
       });
     });
 
@@ -122,7 +123,7 @@ describe('commands', function () {
       nockFixtures.goodSignin();
       nockFixtures.goodOrders();
       nockFixtures.goodOrder();
-      this.req.foodee_user = { username: 'gavin', password: 'password' };
+      this.req.foodee_user = { username: 'gavin', password: 'password', token: 'something', email: 'yo@yo.com' };
 
       const results = await this.commands.date('2016-09-19');
       results.should.eql({
@@ -141,8 +142,8 @@ describe('commands', function () {
           '2x Satay Chicken (df)',
           '*Person 5.*',
           'Boneless Curry Chicken (df,gf)',
-          'Roti Canai (v)',
-        ].join('\n'),
+          'Roti Canai (v)'
+        ].join('\n')
       });
     });
   });

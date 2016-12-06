@@ -5,7 +5,7 @@ const app = require('../lib/app')([
   function debugMiddle(req, res, next) {
     req.data = db; // eslint-disable-line no-param-reassign
     next();
-  },
+  }
 ]);
 
 app.SLACK_TOKEN = 'faketoken';
@@ -20,7 +20,7 @@ const defaultPost = {
   user_name: 'gavin',
   command: '/sauce',
   text: '',
-  response_url: 'https://hooks.slack.com/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
+  response_url: 'https://hooks.slack.com/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be'
 };
 
 describe('/', () => {
