@@ -11,6 +11,7 @@
   "rules": {
     "react/require-extension": 0,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+    "comma-dangle": ["error", "never"],
     "class-methods-use-this": 0,
     "arrow-parens": ["error", "as-needed"],
     "generator-star-spacing": 1,
