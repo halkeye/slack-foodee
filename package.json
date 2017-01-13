@@ -11,7 +11,7 @@
     "start": "async-node index.js",
     "dev": "nodemon --exec async-node -w index.js -w lib index.js",
     "codacy": "cat ./coverage/lcov.info | codacy-coverage",
-    "coverage": "istanbul cover _mocha --report lcovonly -- -R spec",
+    "coverage": "nyc --reporter=lcov --reporter=text mocha",
     "lint": "eslint .",
     "test": "mocha"
   },
@@ -55,11 +55,11 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.7.1",
-    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^3.0.2",
     "mocha-lcov-reporter": "^1.2.0",
     "nock": "^9.0.2",
     "nodemon": "^1.10.2",
+    "nyc": "^10.0.0",
     "should": "^11.1.0",
     "supertest": "^2.0.0",
     "supertest-as-promised": "^4.0.0"
