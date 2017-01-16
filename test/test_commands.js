@@ -109,6 +109,8 @@ describe('commands', function () {
 
     it('logged in and return so', async function () {
       nockFixtures.goodSignin();
+      nockFixtures.goodSignin();
+      nockFixtures.goodSignin();
       nockFixtures.badOrders();
       this.req.foodee_user = { username: 'gavin', password: 'password', token: 'something', email: 'yo@yo.com' };
 
@@ -120,6 +122,8 @@ describe('commands', function () {
     });
 
     it('logged in and an order for date', async function () {
+      nockFixtures.goodSignin();
+      nockFixtures.goodSignin();
       nockFixtures.goodSignin();
       nockFixtures.goodOrders();
       nockFixtures.goodOrder();
