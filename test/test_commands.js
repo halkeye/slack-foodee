@@ -89,7 +89,7 @@ describe('commands', function () {
     it('correct username and password should login', function () {
       nockFixtures.goodSignin();
       return this.commands.login('username', 'password').then(function (results) {
-        results.response_type.should.eql('ephemeral');
+        results.should.not.have.keys('response_type');
         results.text.should.match(/Logged in/);
       });
     });
