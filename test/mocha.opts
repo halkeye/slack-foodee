@@ -1,5 +1,4 @@
 --recursive
 --require env-test
---require async-to-gen/register
 --require should
 --ui bdd
