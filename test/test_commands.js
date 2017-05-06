@@ -38,7 +38,6 @@ const nockFixtures = {
   }
 };
 
-
 describe('commands', function () {
   before(async () => {
     nock.disableNetConnect();
@@ -152,4 +151,3 @@ describe('commands', function () {
     });
   });
 });
-

@@ -2,7 +2,7 @@ const request = require('supertest-as-promised');
 const db = require('../lib/models');
 const nock = require('nock');
 const app = require('../lib/app')([
-  function debugMiddle(req, res, next) {
+  function debugMiddle (req, res, next) {
     req.data = db; // eslint-disable-line no-param-reassign
     next();
   }

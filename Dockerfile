@@ -1,4 +1,4 @@
-FROM node:6.4.0
+FROM node:7.9
 MAINTAINER Gavin Mogan <docker@gavinmogan.com>
 EXPOSE 3000
 
