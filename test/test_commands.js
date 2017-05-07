@@ -17,6 +17,9 @@ const nockFixtures = {
   },
   goodOrders: () => {
     nock('https://www.food.ee')
+      .get('/api/v2/restaurants/55')
+      .replyWithFile(200, path.join(__dirname, 'fixtures/nock_foodee_resturants_55.json'));
+    nock('https://www.food.ee')
       .get('/api/v2/orders')
       .query(() => true)
       .times(2)
@@ -131,22 +134,57 @@ describe('commands', function () {
       const results = await this.commands.date('2016-09-19');
       results.should.eql({
         response_type: 'in_channel',
-        text: [
-          '*2016-09-19*',
-          '*Person 1*',
-          '2x Rendang Beef Express (gf)',
-          '2x Satay Chicken (df)',
-          '*Person 2*',
-          'Gulai Fish Fillet (df,gf)',
-          '*Person 3*',
-          'Boneless Curry Chicken (df,gf)',
-          '*Person 4*',
-          '2x Roti Canai (v)',
-          '2x Satay Chicken (df)',
-          '*Person 5.*',
-          'Boneless Curry Chicken (df,gf)',
-          'Roti Canai (v)'
-        ].join('\n')
+        attachments: [
+          {
+            author_name: 'Banana Leaf',
+            fallback: [
+              '*2016-09-19*',
+              '*Person 1*',
+              '2x Rendang Beef Express (gf)',
+              '2x Satay Chicken (df)',
+              '*Person 2*',
+              'Gulai Fish Fillet (df,gf)',
+              '*Person 3*',
+              'Boneless Curry Chicken (df,gf)',
+              '*Person 4*',
+              '2x Roti Canai (v)',
+              '2x Satay Chicken (df)',
+              '*Person 5.*',
+              'Boneless Curry Chicken (df,gf)',
+              'Roti Canai (v)'
+            ].join('\n'),
+            fields: [
+              {
+                short: true,
+                title: 'Person 1',
+                value: '2x Rendang Beef Express (gf)\n2x Satay Chicken (df)'
+              },
+              {
+                short: true,
+                title: 'Person 2',
+                value: 'Gulai Fish Fillet (df,gf)'
+              },
+              {
+                short: true,
+                title: 'Person 3',
+                value: 'Boneless Curry Chicken (df,gf)'
+              },
+              {
+                short: true,
+                title: 'Person 4',
+                value: '2x Roti Canai (v)\n2x Satay Chicken (df)'
+              },
+              {
+                short: true,
+                title: 'Person 5.',
+                value: 'Boneless Curry Chicken (df,gf)\nRoti Canai (v)'
+              }
+            ],
+            pretext: '2016-09-19',
+            thumb_url: 'https://uploads.food.ee/uploads/images/restaurants/full_bananaleafZ_2_______.jpg',
+            ts: 1474311600
+          }
+        ]
       });
     });
   });
