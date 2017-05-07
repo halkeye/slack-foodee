@@ -34,7 +34,7 @@
     "errorhandler": "^1.4.3",
     "eslint-plugin-async-await": "0.0.0",
     "express": "^4.14.0",
-    "express-promise-router": "^1.1.0",
+    "express-promise-router": "^1.1.1",
     "express-session": "^1.14.1",
     "grant-express": "^3.7.2",
     "lodash.uniqby": "^4.7.0",
@@ -43,6 +43,7 @@
     "moment-timezone": "^0.5.13",
     "morgan": "^1.7.0",
     "mysql": "^2.11.1",
+    "raven": "^1.2.1",
     "sequelize": "^3.24.3",
     "sqlite3": "^3.1.4"
   },
