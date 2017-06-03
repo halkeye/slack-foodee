@@ -60,7 +60,7 @@
     "mocha-lcov-reporter": "^1.2.0",
     "nock": "^9.0.13",
     "nodemon": "^1.10.2",
-    "nyc": "^10.3.2",
+    "nyc": "^11.0.2",
     "should": "^11.1.0",
     "supertest": "^3.0.0",
     "supertest-as-promised": "^4.0.0"
