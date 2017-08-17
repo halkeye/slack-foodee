@@ -1,4 +1,4 @@
-const request = require('supertest-as-promised');
+const request = require('supertest');
 const db = require('../lib/models');
 const nock = require('nock');
 const app = require('../lib/app')([
@@ -20,11 +20,17 @@ const defaultPost = {
   user_name: 'gavin',
   command: '/sauce',
   text: '',
-  response_url: 'https://hooks.slack.com/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be'
+  response_url:
+    'https://hooks.slack.com/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be'
 };
 
 describe('/', () => {
-  it('should return HTML', () => request(app).get('/').expect('Content-Type', /text\/html/).expect(200));
+  it('should return HTML', async () => {
+    const response = await request(app).get('/');
+    response.text.should.match(/Add to Slack/);
+    response.status.should.eql(200);
+    response.header['content-type'].should.match(/text\/html/);
+  });
 });
 
 describe('/slack', () => {
@@ -42,10 +48,14 @@ describe('/slack', () => {
   describe('-empty-', () => {
     before(function () {
       nock('https://hooks.slack.com')
-        .post('/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be', json => {
-          this.json = json;
-          return true;
-        }).reply(200);
+        .post(
+          '/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
+          json => {
+            this.json = json;
+            return true;
+          }
+        )
+        .reply(200);
       return request(app)
         .post('/slack')
         .send(Object.assign({}, defaultPost))
@@ -63,10 +73,14 @@ describe('/slack', () => {
   describe('-badcommand-', () => {
     before(function () {
       nock('https://hooks.slack.com')
-        .post('/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be', json => {
-          this.json = json;
-          return true;
-        }).reply(200);
+        .post(
+          '/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
+          json => {
+            this.json = json;
+            return true;
+          }
+        )
+        .reply(200);
       return request(app)
         .post('/slack')
         .send(Object.assign({}, defaultPost, { text: 'asd901i3ewq09dsaic90i' }))
@@ -87,10 +101,14 @@ describe('/slack', () => {
     });
     before(function () {
       nock('https://hooks.slack.com')
-        .post('/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be', json => {
-          this.json = json;
-          return true;
-        }).reply(200);
+        .post(
+          '/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
+          json => {
+            this.json = json;
+            return true;
+          }
+        )
+        .reply(200);
       return request(app)
         .post('/slack')
         .send(Object.assign({}, defaultPost, { text: 'usage' }))

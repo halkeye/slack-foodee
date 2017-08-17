@@ -1,0 +1,2146 @@
+{
+  "data": [
+    {
+      "id": "747",
+      "type": "menus",
+      "links": {
+        "self": "http://localhost/api/v3/menus/747"
+      },
+      "attributes": {
+        "name": "TAKO, July 13",
+        "active": true,
+        "area-id": 1,
+        "restaurant-id": 616,
+        "created-at": "2016-10-21T13:19:51.604-05:00",
+        "dietary-tags-counts": {
+          "ids": {
+            "1": 6,
+            "3": 4,
+            "4": 1,
+            "5": 2
+          },
+          "names": {
+            "v": 4,
+            "df": 6,
+            "fv": 2,
+            "gf": 1
+          }
+        },
+        "set-menus": {}
+      },
+      "relationships": {
+        "menu-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menus/747/relationships/menu-groups",
+            "related": "http://localhost/api/v3/menus/747/menu-groups"
+          },
+          "data": [
+            {
+              "type": "menu-groups",
+              "id": "4934"
+            },
+            {
+              "type": "menu-groups",
+              "id": "4935"
+            },
+            {
+              "type": "menu-groups",
+              "id": "4936"
+            },
+            {
+              "type": "menu-groups",
+              "id": "4937"
+            },
+            {
+              "type": "menu-groups",
+              "id": "5092"
+            },
+            {
+              "type": "menu-groups",
+              "id": "4938"
+            },
+            {
+              "type": "menu-groups",
+              "id": "4939"
+            }
+          ]
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menus/747/relationships/menu-items",
+            "related": "http://localhost/api/v3/menus/747/menu-items"
+          }
+        },
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menus/747/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menus/747/dietary-tags"
+          }
+        },
+        "area": {
+          "links": {
+            "self": "http://localhost/api/v3/menus/747/relationships/area",
+            "related": "http://localhost/api/v3/menus/747/area"
+          }
+        },
+        "restaurant": {
+          "links": {
+            "self": "http://localhost/api/v3/menus/747/relationships/restaurant",
+            "related": "http://localhost/api/v3/menus/747/restaurant"
+          },
+          "data": {
+            "type": "restaurants",
+            "id": "616"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "4934",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/4934"
+      },
+      "attributes": {
+        "name": "Burrito",
+        "active": true,
+        "internal": false,
+        "description": "Serves 1 ",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-10-21T13:21:33.483-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4934/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/4934/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4934/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/4934/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "24034"
+            },
+            {
+              "type": "menu-items",
+              "id": "24035"
+            },
+            {
+              "type": "menu-items",
+              "id": "24036"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4935",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/4935"
+      },
+      "attributes": {
+        "name": "Bibimbap Bowl ",
+        "active": true,
+        "internal": false,
+        "description": "Served with a spicy Gochujang based sauce to mix into your rice. ",
+        "position": 2,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-10-21T13:24:22.153-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4935/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/4935/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4935/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/4935/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "24037"
+            },
+            {
+              "type": "menu-items",
+              "id": "24038"
+            },
+            {
+              "type": "menu-items",
+              "id": "24039"
+            },
+            {
+              "type": "menu-items",
+              "id": "33432"
+            },
+            {
+              "type": "menu-items",
+              "id": "24040"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4936",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/4936"
+      },
+      "attributes": {
+        "name": "Quesadilla ",
+        "active": true,
+        "internal": false,
+        "description": "",
+        "position": 3,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-10-21T13:27:31.600-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4936/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/4936/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4936/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/4936/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "40922"
+            },
+            {
+              "type": "menu-items",
+              "id": "24041"
+            },
+            {
+              "type": "menu-items",
+              "id": "24042"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4937",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/4937"
+      },
+      "attributes": {
+        "name": "Sides",
+        "active": true,
+        "internal": false,
+        "description": "",
+        "position": 4,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-10-21T13:28:42.737-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4937/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/4937/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4937/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/4937/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "24043"
+            },
+            {
+              "type": "menu-items",
+              "id": "40923"
+            },
+            {
+              "type": "menu-items",
+              "id": "41801"
+            },
+            {
+              "type": "menu-items",
+              "id": "41802"
+            },
+            {
+              "type": "menu-items",
+              "id": "40921"
+            },
+            {
+              "type": "menu-items",
+              "id": "24044"
+            },
+            {
+              "type": "menu-items",
+              "id": "24045"
+            },
+            {
+              "type": "menu-items",
+              "id": "24046"
+            },
+            {
+              "type": "menu-items",
+              "id": "24047"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "5092",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/5092"
+      },
+      "attributes": {
+        "name": "Beverages",
+        "active": true,
+        "internal": false,
+        "description": "",
+        "position": 5,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-11-02T12:44:01.330-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/5092/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/5092/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/5092/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/5092/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "25214"
+            },
+            {
+              "type": "menu-items",
+              "id": "25019"
+            },
+            {
+              "type": "menu-items",
+              "id": "25020"
+            },
+            {
+              "type": "menu-items",
+              "id": "25215"
+            },
+            {
+              "type": "menu-items",
+              "id": "25018"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4938",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/4938"
+      },
+      "attributes": {
+        "name": "Cutlery",
+        "active": true,
+        "internal": false,
+        "description": "",
+        "position": 6,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-10-21T13:31:31.469-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4938/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/4938/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4938/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/4938/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "24048"
+            },
+            {
+              "type": "menu-items",
+              "id": "24049"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4939",
+      "type": "menu-groups",
+      "links": {
+        "self": "http://localhost/api/v3/menu-groups/4939"
+      },
+      "attributes": {
+        "name": "Custom Item",
+        "active": true,
+        "internal": true,
+        "description": "",
+        "position": 7,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "created-at": "2016-10-21T13:32:50.699-05:00"
+      },
+      "relationships": {
+        "menu": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4939/relationships/menu",
+            "related": "http://localhost/api/v3/menu-groups/4939/menu"
+          }
+        },
+        "menu-items": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-groups/4939/relationships/menu-items",
+            "related": "http://localhost/api/v3/menu-groups/4939/menu-items"
+          },
+          "data": [
+            {
+              "type": "menu-items",
+              "id": "24050"
+            },
+            {
+              "type": "menu-items",
+              "id": "24051"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "24034",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24034"
+      },
+      "attributes": {
+        "name": "Bulgogi Burrito",
+        "active": true,
+        "description": "Bulgogi, kimchi fried rice, corn, cheese in a tortilla wrap",
+        "position": 0,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1260,
+        "restaurant-price-cents": 931,
+        "retail-price-cents": 1095,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:23:40.197-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24034/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24034/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "5"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24034/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24034/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24034/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24034/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24034/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24034/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24035",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24035"
+      },
+      "attributes": {
+        "name": "Spicy Pork Burrito",
+        "active": true,
+        "description": "Spicy pork, kimchi fried rice, corn, cheese in a tortilla wrap",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1260,
+        "restaurant-price-cents": 931,
+        "retail-price-cents": 1095,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:23:41.194-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24035/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24035/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24035/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24035/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24035/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24035/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24035/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24035/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24036",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24036"
+      },
+      "attributes": {
+        "name": "BBQ Short Rib Burrito ",
+        "active": true,
+        "description": "BBQ short rib, kimchi fried rice, corn, cheese in a tortilla wrap",
+        "position": 2,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1320,
+        "restaurant-price-cents": 973,
+        "retail-price-cents": 1145,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:24:04.764-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24036/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24036/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24036/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24036/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24036/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24036/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24036/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24036/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24037",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24037"
+      },
+      "attributes": {
+        "name": "BBQ Short Rib Bibimbap",
+        "active": true,
+        "description": "BBQ short rib, assorted veggies on rice with soft boiled egg",
+        "position": 0,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1320,
+        "restaurant-price-cents": 973,
+        "retail-price-cents": 1145,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:26:40.275-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24037/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24037/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "1"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24037/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24037/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24037/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24037/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24037/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24037/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24038",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24038"
+      },
+      "attributes": {
+        "name": "Bulgogi Bibimbap",
+        "active": true,
+        "description": "Bulgogi, assorted veggies on rice with soft boiled egg",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1260,
+        "restaurant-price-cents": 931,
+        "retail-price-cents": 1095,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:26:40.993-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24038/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24038/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "1"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24038/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24038/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24038/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24038/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24038/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24038/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24039",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24039"
+      },
+      "attributes": {
+        "name": "Spicy Pork Bibimbap",
+        "active": true,
+        "description": "Spicy pork,  assorted veggies on rice with soft boiled egg",
+        "position": 2,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1260,
+        "restaurant-price-cents": 931,
+        "retail-price-cents": 1095,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:26:46.990-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24039/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24039/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "1"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24039/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24039/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24039/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24039/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24039/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24039/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "33432",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/33432"
+      },
+      "attributes": {
+        "name": "Chicken Mayo Bibimbap",
+        "active": true,
+        "description": "Korean fried chicken, mayonnaise, home made soysauce, seaweed and green onion on rice",
+        "position": 3,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1260,
+        "restaurant-price-cents": 931,
+        "retail-price-cents": 1095,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2017-02-28T14:51:44.858-06:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/33432/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/33432/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "1"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/33432/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/33432/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/33432/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/33432/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/33432/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/33432/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24040",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24040"
+      },
+      "attributes": {
+        "name": "Vegetarian Bibimbap",
+        "active": true,
+        "description": "Korean style pickled radish, assorted veggies on rice with soft boiled egg",
+        "position": 4,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1260,
+        "restaurant-price-cents": 931,
+        "retail-price-cents": 1095,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:27:02.426-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24040/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24040/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "1"
+            },
+            {
+              "type": "dietary-tags",
+              "id": "3"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24040/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24040/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24040/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24040/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24040/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24040/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "40922",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/40922"
+      },
+      "attributes": {
+        "name": "Veggie Quesadilla",
+        "active": true,
+        "description": "Kimchi, mushroom, tomato and cheese",
+        "position": 0,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1140,
+        "restaurant-price-cents": 842,
+        "retail-price-cents": 990,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2017-06-26T13:05:45.772-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40922/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/40922/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "3"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40922/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/40922/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40922/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/40922/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40922/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/40922/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24041",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24041"
+      },
+      "attributes": {
+        "name": "Kimchi Quesadilla ",
+        "active": true,
+        "description": "Pan fried kimchi, bulgogi, corn, red onion, cheese",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1185,
+        "restaurant-price-cents": 876,
+        "retail-price-cents": 1030,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:28:31.170-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24041/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24041/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24041/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24041/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24041/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24041/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24041/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24041/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24042",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24042"
+      },
+      "attributes": {
+        "name": "Omma Quesadilla ",
+        "active": true,
+        "description": "Bulgogi, mushroom, cheese, red onion",
+        "position": 2,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1185,
+        "restaurant-price-cents": 876,
+        "retail-price-cents": 1030,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:28:31.463-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24042/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24042/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "5"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24042/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24042/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24042/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24042/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24042/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24042/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24043",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24043"
+      },
+      "attributes": {
+        "name": "Seoul Chicken (small) - with spicy sauce",
+        "active": true,
+        "description": "Korean style fried chicken nuggets, covered in spicy sauce. Served on corn chips | Serves 1 as a light meal or 2 as a side",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 905,
+        "restaurant-price-cents": 667,
+        "retail-price-cents": 785,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:29:37.820-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24043/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24043/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24043/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24043/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24043/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24043/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24043/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24043/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "40923",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/40923"
+      },
+      "attributes": {
+        "name": "Seoul Chicken (small) - with soy sauce",
+        "active": true,
+        "description": "Marinated Korean style fried chicken in soy sauce. Served on corn chips | Serves 1 as a light meal or 2 as a side",
+        "position": 2,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 905,
+        "restaurant-price-cents": 667,
+        "retail-price-cents": 785,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2017-06-26T13:07:36.721-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40923/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/40923/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40923/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/40923/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40923/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/40923/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40923/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/40923/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "41801",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/41801"
+      },
+      "attributes": {
+        "name": "Seoul Chicken (large) - with spicy sauce",
+        "active": true,
+        "description": "Korean style fried chicken nuggets, covered in spicy sauce. Served on corn chips",
+        "position": 3,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1640,
+        "restaurant-price-cents": 1215,
+        "retail-price-cents": 1425,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2017-07-14T14:15:33.604-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41801/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/41801/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41801/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/41801/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41801/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/41801/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41801/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/41801/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "41802",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/41802"
+      },
+      "attributes": {
+        "name": "Seoul Chicken (large) - with soy sauce",
+        "active": true,
+        "description": "Marinated Korean style fried chicken in soy sauce. Served on corn chips",
+        "position": 4,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 1640,
+        "restaurant-price-cents": 1215,
+        "retail-price-cents": 1425,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2017-07-14T14:16:00.651-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41802/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/41802/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41802/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/41802/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41802/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/41802/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/41802/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/41802/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "40921",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/40921"
+      },
+      "attributes": {
+        "name": "Mandu",
+        "active": true,
+        "description": "Korean-style fried dumplings with salsa sauce",
+        "position": 5,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 670,
+        "restaurant-price-cents": 493,
+        "retail-price-cents": 580,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2017-06-26T13:04:17.161-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40921/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/40921/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40921/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/40921/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40921/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/40921/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/40921/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/40921/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24044",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24044"
+      },
+      "attributes": {
+        "name": "Corn Chips ",
+        "active": true,
+        "description": "",
+        "position": 6,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 395,
+        "restaurant-price-cents": 289,
+        "retail-price-cents": 340,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:29:56.581-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24044/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24044/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "3"
+            },
+            {
+              "type": "dietary-tags",
+              "id": "4"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24044/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24044/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24044/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24044/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24044/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24044/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24045",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24045"
+      },
+      "attributes": {
+        "name": "Salsa",
+        "active": true,
+        "description": "",
+        "position": 7,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 205,
+        "restaurant-price-cents": 149,
+        "retail-price-cents": 175,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:30:18.750-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24045/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24045/dietary-tags"
+          },
+          "data": [
+            {
+              "type": "dietary-tags",
+              "id": "3"
+            },
+            {
+              "type": "dietary-tags",
+              "id": "1"
+            }
+          ]
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24045/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24045/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24045/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24045/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24045/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24045/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24046",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24046"
+      },
+      "attributes": {
+        "name": "Cheese Sauce ",
+        "active": true,
+        "description": "",
+        "position": 8,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 205,
+        "restaurant-price-cents": 149,
+        "retail-price-cents": 175,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:30:28.064-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24046/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24046/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24046/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24046/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24046/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24046/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24046/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24046/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24047",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24047"
+      },
+      "attributes": {
+        "name": "Sour Cream ",
+        "active": true,
+        "description": "",
+        "position": 9,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 135,
+        "restaurant-price-cents": 98,
+        "retail-price-cents": 115,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:30:35.791-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24047/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24047/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24047/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24047/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24047/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24047/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24047/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24047/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25214",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/25214"
+      },
+      "attributes": {
+        "name": "Can of Pop ",
+        "active": true,
+        "description": "Coke, Diet Coke, Coke Zero, Canada Dry, Sprite, Nestea (lemon)",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 265,
+        "restaurant-price-cents": 195,
+        "retail-price-cents": 230,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-11-03T16:50:40.395-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25214/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/25214/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25214/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/25214/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25214/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/25214/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25214/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/25214/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25019",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/25019"
+      },
+      "attributes": {
+        "name": "Bottled Water ",
+        "active": true,
+        "description": "",
+        "position": 2,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 265,
+        "restaurant-price-cents": 195,
+        "retail-price-cents": 230,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-11-02T12:45:10.972-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25019/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/25019/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25019/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/25019/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25019/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/25019/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25019/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/25019/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25020",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/25020"
+      },
+      "attributes": {
+        "name": "49th Parallel Cold Brew ",
+        "active": true,
+        "description": "",
+        "position": 3,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 550,
+        "restaurant-price-cents": 407,
+        "retail-price-cents": 478,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-11-02T12:45:26.271-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25020/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/25020/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25020/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/25020/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25020/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/25020/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25020/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/25020/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25215",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/25215"
+      },
+      "attributes": {
+        "name": "Vitamin Water ",
+        "active": true,
+        "description": "Energy, Multi-V, XXX",
+        "position": 4,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 435,
+        "restaurant-price-cents": 320,
+        "retail-price-cents": 375,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-11-03T16:51:49.353-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25215/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/25215/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25215/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/25215/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25215/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/25215/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25215/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/25215/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "25018",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/25018"
+      },
+      "attributes": {
+        "name": "Bottle of Pop",
+        "active": false,
+        "description": "Coke, Diet Coke, Coke Zero, Canada Dry, Sprite ",
+        "position": 5,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 460,
+        "restaurant-price-cents": 340,
+        "retail-price-cents": 400,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-11-02T12:45:04.670-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25018/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/25018/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25018/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/25018/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25018/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/25018/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/25018/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/25018/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24048",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24048"
+      },
+      "attributes": {
+        "name": "Cutlery ",
+        "active": true,
+        "description": "Per person. Includes 1 compostable knife, fork, napkin",
+        "position": 0,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "restaurant-price-cents": 0,
+        "retail-price-cents": 0,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:32:29.092-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24048/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24048/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24048/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24048/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24048/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24048/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24048/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24048/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24049",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24049"
+      },
+      "attributes": {
+        "name": "Plates",
+        "active": true,
+        "description": "Per person. ",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 10,
+        "restaurant-price-cents": 0,
+        "retail-price-cents": 0,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:32:44.082-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24049/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24049/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24049/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24049/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24049/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24049/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24049/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24049/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24050",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24050"
+      },
+      "attributes": {
+        "name": "Custom Item ",
+        "active": true,
+        "description": "",
+        "position": 0,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 0,
+        "restaurant-price-cents": 0,
+        "retail-price-cents": 0,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:32:58.349-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24050/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24050/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24050/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24050/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24050/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24050/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24050/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24050/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "24051",
+      "type": "menu-items",
+      "links": {
+        "self": "http://localhost/api/v3/menu-items/24051"
+      },
+      "attributes": {
+        "name": "Avocado ",
+        "active": true,
+        "description": "",
+        "position": 1,
+        "minimum-quantity": null,
+        "maximum-quantity": null,
+        "client-price-cents": 115,
+        "restaurant-price-cents": 85,
+        "retail-price-cents": 100,
+        "tax-rate-id": 1,
+        "taxable": true,
+        "created-at": "2016-10-21T13:33:11.256-05:00"
+      },
+      "relationships": {
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24051/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/menu-items/24051/dietary-tags"
+          },
+          "data": []
+        },
+        "tax-rate": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24051/relationships/tax-rate",
+            "related": "http://localhost/api/v3/menu-items/24051/tax-rate"
+          }
+        },
+        "menu-group": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24051/relationships/menu-group",
+            "related": "http://localhost/api/v3/menu-items/24051/menu-group"
+          }
+        },
+        "menu-option-groups": {
+          "links": {
+            "self": "http://localhost/api/v3/menu-items/24051/relationships/menu-option-groups",
+            "related": "http://localhost/api/v3/menu-items/24051/menu-option-groups"
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "5",
+      "type": "dietary-tags",
+      "links": {
+        "self": "http://localhost/api/v3/dietary-tags/5"
+      },
+      "attributes": {
+        "name": "favorite",
+        "slug": "favorite",
+        "abbreviation": "fv",
+        "color": "#9D2524"
+      },
+      "relationships": {
+        "menu-option-items": {
+          "links": {
+            "self": "http://localhost/api/v3/dietary-tags/5/relationships/menu-option-items",
+            "related": "http://localhost/api/v3/dietary-tags/5/menu-option-items"
+          }
+        }
+      }
+    },
+    {
+      "id": "1",
+      "type": "dietary-tags",
+      "links": {
+        "self": "http://localhost/api/v3/dietary-tags/1"
+      },
+      "attributes": {
+        "name": "dairy free",
+        "slug": "dairy-free",
+        "abbreviation": "df",
+        "color": "#2e7dba"
+      },
+      "relationships": {
+        "menu-option-items": {
+          "links": {
+            "self": "http://localhost/api/v3/dietary-tags/1/relationships/menu-option-items",
+            "related": "http://localhost/api/v3/dietary-tags/1/menu-option-items"
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "type": "dietary-tags",
+      "links": {
+        "self": "http://localhost/api/v3/dietary-tags/3"
+      },
+      "attributes": {
+        "name": "vegetarian",
+        "slug": "vegetarian",
+        "abbreviation": "v",
+        "color": "#3BB76C"
+      },
+      "relationships": {
+        "menu-option-items": {
+          "links": {
+            "self": "http://localhost/api/v3/dietary-tags/3/relationships/menu-option-items",
+            "related": "http://localhost/api/v3/dietary-tags/3/menu-option-items"
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "type": "dietary-tags",
+      "links": {
+        "self": "http://localhost/api/v3/dietary-tags/4"
+      },
+      "attributes": {
+        "name": "gluten free",
+        "slug": "gluten-free",
+        "abbreviation": "gf",
+        "color": "#F68B29"
+      },
+      "relationships": {
+        "menu-option-items": {
+          "links": {
+            "self": "http://localhost/api/v3/dietary-tags/4/relationships/menu-option-items",
+            "related": "http://localhost/api/v3/dietary-tags/4/menu-option-items"
+          }
+        }
+      }
+    },
+    {
+      "id": "616",
+      "type": "restaurants",
+      "links": {
+        "self": "http://localhost/api/v3/restaurants/616"
+      },
+      "attributes": {
+        "created-at": "2016-10-21T13:05:57.473-05:00",
+        "updated-at": "2017-07-21T16:55:30.235-05:00",
+        "active": true,
+        "name": "TAKO",
+        "slug": "tako",
+        "subtitle": "TAqueria KOreano",
+        "legal-name": "KUMA RESTAURANT GROUP INC",
+        "pickup-notes": "",
+        "dietary-tags-counts": {
+          "ids": {
+            "1": 6,
+            "3": 4,
+            "4": 1,
+            "5": 2
+          },
+          "names": {
+            "v": 4,
+            "df": 6,
+            "fv": 2,
+            "gf": 1
+          }
+        },
+        "coming-soon": false,
+        "hours-in-advance": 21,
+        "internal": false,
+        "is-new": false,
+        "cover-image-url": "https://cdn.filepicker.io/api/file/Q6dVP9PBRNqAPHW7xqK0",
+        "thumbnail-image-url": "https://cdn.filepicker.io/api/file/3RwKV2FR92I5j19T9bmY",
+        "is-paying-admin-fee": true,
+        "can-group-order": true,
+        "receives-daily-order-summary": true,
+        "receives-sms": false,
+        "marketing-title": "",
+        "marketing-description": ""
+      },
+      "relationships": {
+        "orders": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/orders",
+            "related": "http://localhost/api/v3/restaurants/616/orders"
+          }
+        },
+        "service-times": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/service-times",
+            "related": "http://localhost/api/v3/restaurants/616/service-times"
+          }
+        },
+        "pickup-locations": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/pickup-locations",
+            "related": "http://localhost/api/v3/restaurants/616/pickup-locations"
+          }
+        },
+        "billing-contact": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/billing-contact",
+            "related": "http://localhost/api/v3/restaurants/616/billing-contact"
+          }
+        },
+        "owner": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/owner",
+            "related": "http://localhost/api/v3/restaurants/616/owner"
+          }
+        },
+        "dietary-tags": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/dietary-tags",
+            "related": "http://localhost/api/v3/restaurants/616/dietary-tags"
+          }
+        },
+        "tags": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/tags",
+            "related": "http://localhost/api/v3/restaurants/616/tags"
+          }
+        },
+        "areas": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/areas",
+            "related": "http://localhost/api/v3/restaurants/616/areas"
+          }
+        },
+        "menus": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/menus",
+            "related": "http://localhost/api/v3/restaurants/616/menus"
+          }
+        },
+        "closures": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/closures",
+            "related": "http://localhost/api/v3/restaurants/616/closures"
+          }
+        },
+        "versions": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/versions",
+            "related": "http://localhost/api/v3/restaurants/616/versions"
+          }
+        },
+        "promo-codes": {
+          "links": {
+            "self": "http://localhost/api/v3/restaurants/616/relationships/promo-codes",
+            "related": "http://localhost/api/v3/restaurants/616/promo-codes"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "record-count": 1
+  },
+  "links": {
+    "first": "http://localhost/api/v3/restaurants/616/menus?filter%5Bactive%5D=true&include=menu-groups.menu-items.dietary-tags%2Crestaurant%2Cmenu-groups.menu-items.menu-option-groups.menu-option-items&page%5Blimit%5D=20&page%5Boffset%5D=0",
+    "last": "http://localhost/api/v3/restaurants/616/menus?filter%5Bactive%5D=true&include=menu-groups.menu-items.dietary-tags%2Crestaurant%2Cmenu-groups.menu-items.menu-option-groups.menu-option-items&page%5Blimit%5D=20&page%5Boffset%5D=0"
+  }
+}
