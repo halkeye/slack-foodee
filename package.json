@@ -9,7 +9,10 @@
     "verbose": true,
     "bail": false,
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["/node_modules/", "/__tests__/__fixtures.js"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/__fixtures.js"
+    ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/__tests__/fixtures/",
@@ -22,9 +25,9 @@
     "start": "node index.js",
     "dev": "nodemon -w index.js -w lib index.js",
     "codacy": "cat ./coverage/lcov.info | codacy-coverage",
-    "coverage": "nyc --reporter=lcov --reporter=text mocha",
+    "coverage": "jest --coverage",
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "mocha"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -64,16 +67,15 @@
     "eslint": "^4.1.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^3.3.0",
-    "mocha-lcov-reporter": "^1.2.0",
+    "jest": "^20.0.4",
     "nock": "^9.0.13",
     "nodemon": "^1.10.2",
     "nyc": "^11.0.2",
     "should": "^11.1.0",
-    "supertest": "^3.0.0",
-    "supertest-as-promised": "^4.0.0"
+    "supertest": "^3.0.0"
   }
 }
