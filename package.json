@@ -6,9 +6,11 @@
     "node": ">= 8.4"
   },
   "jest": {
+    "transform": {},
     "verbose": true,
     "bail": false,
     "testEnvironment": "node",
+    "setupFiles": ["env-test", "should"],
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/__tests__/__fixtures.js"
