@@ -1,4 +1,0 @@
---recursive
---require env-test
---require should
---ui bdd

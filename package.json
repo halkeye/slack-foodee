@@ -3,7 +3,18 @@
   "version": "1.1.0",
   "private": true,
   "engines": {
-    "node": "v7.9"
+    "node": ">= 8.4"
+  },
+  "jest": {
+    "verbose": true,
+    "bail": false,
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": ["/node_modules/", "/__tests__/__fixtures.js"],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/fixtures/",
+      "/__tests__/__fixtures.js"
+    ]
   },
   "description": "Slack slash commands for foodee",
   "main": "index.js",

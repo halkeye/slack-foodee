@@ -1,3 +1,4 @@
+require('should');
 const request = require('supertest');
 const db = require('../lib/models');
 const nock = require('nock');
@@ -27,26 +28,26 @@ const defaultPost = {
 describe('/', () => {
   it('should return HTML', async () => {
     const response = await request(app).get('/');
-    response.text.should.match(/Add to Slack/);
-    response.status.should.eql(200);
-    response.header['content-type'].should.match(/text\/html/);
+    expect(response.text).toMatch(/Add to Slack/);
+    expect(response.status).toEqual(200);
+    expect(response.header['content-type']).toMatch(/text\/html/);
   });
 });
 
 describe('/slack', () => {
-  before(async () => {
+  beforeAll(async () => {
     nock.disableNetConnect();
     nock.enableNetConnect('127.0.0.1');
     await db.syncAll({ force: true });
   });
   beforeEach(() => db.destroyAll());
   afterEach(() => nock.cleanAll());
-  after(() => {
+  afterAll(() => {
     nock.enableNetConnect();
   });
 
   describe('-empty-', () => {
-    before(function () {
+    it('should post usage with error', async () => {
       nock('https://hooks.slack.com')
         .post(
           '/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
@@ -56,22 +57,20 @@ describe('/slack', () => {
           }
         )
         .reply(200);
-      return request(app)
+      await request(app)
         .post('/slack')
         .send(Object.assign({}, defaultPost))
         .set('content-type', 'application/json')
         .expect(200);
-    });
 
-    it('should post usage with error', function () {
       this.json.response_type.should.eql('ephemeral');
-      this.json.text.should.containEql('No command specified');
-      this.json.text.should.containEql('Usage');
+      this.json.text.should.match(/No command specified/);
+      this.json.text.should.match(/Usage/);
     });
   });
 
   describe('-badcommand-', () => {
-    before(function () {
+    it('should post usage with error', async () => {
       nock('https://hooks.slack.com')
         .post(
           '/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
@@ -81,25 +80,20 @@ describe('/slack', () => {
           }
         )
         .reply(200);
-      return request(app)
+      await request(app)
         .post('/slack')
         .send(Object.assign({}, defaultPost, { text: 'asd901i3ewq09dsaic90i' }))
         .set('content-type', 'application/json')
         .expect(200);
-    });
-    it('should post usage with error', function () {
+
       this.json.response_type.should.eql('ephemeral');
-      this.json.text.should.containEql('Invalid Command');
-      this.json.text.should.containEql('Usage');
+      this.json.text.should.match(/Invalid Command/);
+      this.json.text.should.match(/Usage/);
     });
   });
 
   describe('usage', () => {
-    it('show basic usage command', function () {
-      this.json.response_type.should.eql('ephemeral');
-      this.json.text.should.containEql('Usage');
-    });
-    before(function () {
+    it('show basic usage command', async () => {
       nock('https://hooks.slack.com')
         .post(
           '/commands/T024TC0TE/37372872721/LQWTwBQEh7ocPIlkQmML17Be',
@@ -109,11 +103,13 @@ describe('/slack', () => {
           }
         )
         .reply(200);
-      return request(app)
+      await request(app)
         .post('/slack')
         .send(Object.assign({}, defaultPost, { text: 'usage' }))
         .set('content-type', 'application/json')
         .expect(200);
+      this.json.response_type.should.eql('ephemeral');
+      this.json.text.should.match(/Usage/);
     });
   });
 });

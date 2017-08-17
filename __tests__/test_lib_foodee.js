@@ -1,9 +1,10 @@
+const should = require('should');
 const path = require('path');
 const nock = require('nock');
 const fs = require('fs');
 
 const Foodee = require('../lib/foodee');
-const fixtures = require('./_fixtures.js');
+const fixtures = require('./__fixtures.js');
 
 nock.disableNetConnect();
 nock.cleanAll();
@@ -78,37 +79,42 @@ const nockFixtures = {
   }
 };
 
-describe('foodee', function () {
-  describe(`good login()`, async function () {
+describe('foodee', () => {
+  beforeEach(() => nock.cleanAll());
+
+  test(`good login()`, async () => {
     const foodee = new Foodee({});
     nockFixtures.goodSignin();
     const login = await foodee.login();
     writeJSON(login, `lib_foodee_good_login.json`);
-    login.should.eql(fixtures[`lib_foodee_good_login`]);
+    login.should.eql(fixtures.lib_foodee_good_login);
   });
 
-  describe(`bad login()`, async function () {
+  test(`bad login()`, () => {
     const foodee = new Foodee({});
     nockFixtures.badSignin();
-    foodee.login().should.be.rejectedWith(Foodee.BadCredentials);
+    const login = foodee.login();
+    return should(login).be.rejectedWith(Foodee.BadCredentials);
   });
 
-  ['good', 'bad'].forEach(type => {
-    describe(`get${type}Orders`, function () {
+  ['good', 'bad'].forEach(async type => {
+    describe(`${type} getOrders`, async () => {
       const foodee = new Foodee({
         username: 'gavin@example.com',
         password: 'password'
       });
-      nockFixtures.goodSignin();
-      nockFixtures[`${type}Orders`]();
+      beforeEach(() => {
+        nockFixtures.goodSignin();
+        nockFixtures[`${type}Orders`]();
+      });
 
-      it('getFutureOrders', async () => {
+      test('getFutureOrders', async () => {
         const orders = await foodee.getFutureOrders();
         writeJSON(orders, `lib_foodee_${type}_get_future_orders.json`);
         orders.should.eql(fixtures[`lib_foodee_${type}_get_future_orders`]);
       });
 
-      it('getPastOrders', async () => {
+      test('getPastOrders', async () => {
         const orders = await foodee.getPastOrders();
         writeJSON(orders, `lib_foodee_${type}_get_past_orders.json`);
         orders.should.eql(fixtures[`lib_foodee_${type}_get_past_orders`]);
@@ -116,40 +122,45 @@ describe('foodee', function () {
     });
   });
 
-  describe('getOrder', function () {
-    nockFixtures.goodSignin();
-    nockFixtures.goodOrder();
-    nock('https://www.food.ee', { encodedQueryParams: true })
-      .get('/api/v3/orders/105425/group-order-members')
-      .query({
-        page: { limit: 300, offset: 0 },
-        include:
-          'order-items.menu-item,order-items.menu-option-items,order-items.order,order'
-      })
-      .replyWithFile(
-        200,
-        path.join(__dirname, 'fixtures/nock_foodee_group_members.json'),
-        { 'Content-Type': 'application/json' }
-      );
+  describe('getOrder', async () => {
+    beforeEach(() => {
+      nockFixtures.goodSignin();
+      nockFixtures.goodOrder();
+      nock('https://www.food.ee', { encodedQueryParams: true })
+        .get('/api/v3/orders/105425/group-order-members')
+        .query({
+          page: { limit: 300, offset: 0 },
+          include:
+            'order-items.menu-item,order-items.menu-option-items,order-items.order,order'
+        })
+        .replyWithFile(
+          200,
+          path.join(__dirname, 'fixtures/nock_foodee_group_members.json'),
+          { 'Content-Type': 'application/json' }
+        );
 
-    nock('https://www.food.ee', { encodedQueryParams: true })
-      .get('/api/v3/restaurants/10/menus')
-      .query({
-        filter: { active: true },
-        include:
-          'menu-groups.menu-items.dietary-tags,restaurant,menu-groups.menu-items.menu-option-groups.menu-option-items'
-      })
-      .replyWithFile(
-        200,
-        path.join(__dirname, 'fixtures/nock_foodee_restaurants_616_menus.json'),
-        { 'Content-Type': 'application/json' }
-      );
+      nock('https://www.food.ee', { encodedQueryParams: true })
+        .get('/api/v3/restaurants/10/menus')
+        .query({
+          filter: { active: true },
+          include:
+            'menu-groups.menu-items.dietary-tags,restaurant,menu-groups.menu-items.menu-option-groups.menu-option-items'
+        })
+        .replyWithFile(
+          200,
+          path.join(
+            __dirname,
+            'fixtures/nock_foodee_restaurants_616_menus.json'
+          ),
+          { 'Content-Type': 'application/json' }
+        );
+    });
 
     const foodee = new Foodee({
       username: 'gavin@example.com',
       password: 'password'
     });
-    it('getOrder', async () => {
+    test('getOrder', async () => {
       const order = await foodee.getOrder(
         'b7b18cc6-c95f-42e2-9b99-6c1c93440218'
       );
