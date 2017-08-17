@@ -47,3 +47,6 @@ jspm_packages
 
 # databases
 *.db
+
+.vscode/
+package-lock.json
