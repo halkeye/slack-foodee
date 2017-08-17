@@ -38,12 +38,6 @@ const nockFixtures = {
   },
   goodOrders: () => {
     nock('https://www.food.ee')
-      .get('/api/v2/restaurants/55')
-      .replyWithFile(
-        200,
-        path.join(__dirname, 'fixtures/nock_foodee_resturants_55.json')
-      );
-    nock('https://www.food.ee')
       .get('/api/v2/orders')
       .query(() => true)
       .times(2)
