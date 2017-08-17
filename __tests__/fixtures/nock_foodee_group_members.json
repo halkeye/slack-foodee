@@ -8,7 +8,7 @@
       },
       "attributes": {
         "name": "Person 2",
-        "email": "***REMOVED***",
+        "email": "person2@example.com",
         "phone-number": "6046160492",
         "department": null,
         "terms-accepted-at": null,
@@ -48,7 +48,7 @@
       },
       "attributes": {
         "name": "Person 2",
-        "email": "***REMOVED***",
+        "email": "person2@example.com",
         "phone-number": "6046160492",
         "department": null,
         "terms-accepted-at": null,
@@ -88,7 +88,7 @@
       },
       "attributes": {
         "name": "Bearded Man",
-        "email": "***REMOVED***",
+        "email": "bearded.man@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
@@ -137,7 +137,7 @@
       },
       "attributes": {
         "name": "Person 2",
-        "email": "***REMOVED***",
+        "email": "person2@example.com",
         "phone-number": "6046160492",
         "department": null,
         "terms-accepted-at": null,
@@ -177,7 +177,7 @@
       },
       "attributes": {
         "name": "Person 2",
-        "email": "***REMOVED***",
+        "email": "person2@example.com",
         "phone-number": "6046160492",
         "department": null,
         "terms-accepted-at": null,
@@ -217,7 +217,7 @@
       },
       "attributes": {
         "name": "Person 1",
-        "email": "***REMOVED***",
+        "email": "person1@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
@@ -266,7 +266,7 @@
       },
       "attributes": {
         "name": "Person 7",
-        "email": "***REMOVED***",
+        "email": "person7@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
@@ -311,7 +311,7 @@
       },
       "attributes": {
         "name": "Person 2",
-        "email": "***REMOVED***",
+        "email": "person2@example.com",
         "phone-number": "6046160492",
         "department": null,
         "terms-accepted-at": null,
@@ -351,7 +351,7 @@
       },
       "attributes": {
         "name": "Darth Maul",
-        "email": "matthew.***REMOVED***",
+        "email": "Darth.Maul@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
@@ -396,7 +396,7 @@
       },
       "attributes": {
         "name": "Person 5",
-        "email": "henry.***REMOVED***",
+        "email": "person5@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
@@ -445,7 +445,7 @@
       },
       "attributes": {
         "name": "Person 6",
-        "email": "dan.***REMOVED***",
+        "email": "person6@example.com",
         "phone-number": "",
         "department": "dev",
         "terms-accepted-at": null,
@@ -494,7 +494,7 @@
       },
       "attributes": {
         "name": "Person 3",
-        "email": "***REMOVED***",
+        "email": "person3@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
@@ -547,7 +547,7 @@
       },
       "attributes": {
         "name": "Person 2",
-        "email": "***REMOVED***",
+        "email": "person2@example.com",
         "phone-number": "6046160492",
         "department": null,
         "terms-accepted-at": null,
@@ -596,7 +596,7 @@
       },
       "attributes": {
         "name": "Person 4",
-        "email": "***REMOVED***",
+        "email": "person4@example.com",
         "phone-number": null,
         "department": null,
         "terms-accepted-at": null,
