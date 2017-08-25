@@ -1,21 +1,11 @@
-sudo: required
 language: node_js
 node_js:
 - 8.4
-services:
-- docker
-install:
-- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-- sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-- sudo apt-get update
-- sudo apt-get -y install docker-ce
-- docker build --build-arg NPM_CONFIG_LOGLEVEL=$NPM_CONFIG_LOGLEVEL -t halkeye/slack-foodee .
-after_success:
-- npm run codacy
-- if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"; docker push halkeye/slack-foodee; fi
 script:
 - npm run coverage
 - npm run lint
+after_success:
+- npm run codacy
 env:
   global:
     secure: O85oMS5teZqNEE0P09Ke0fZh5WVLxb1Qf1ItDDColb0qI8IlydsW1pPz0tHUdaAE2ElpS6hR1YMbr7w+mw8uxykw5IQbpFDBSk2RQIbvJI2M+g7ZshpdeKTpuQn3twMEt3//GTcuWJh7I4r6gKV93Ci0cHAsdxg3nPm1hK1BucaOqFnTBH7EhW3Ea/hzXM4EgTEUb8n7/Iu335ZpvtBLfNGCw4cP9MqpnyDm85qs0LokAejSOn2j+1MQkkxhTkzlxGoL5fYsg60VtjmsdRipu9jQl5jSMDASZMISdo5VAFSMBB7S6g5VviXjvELc+0k1zeiwq8cRzvhOQvoYoGLaYfx3zP1wBaynyP6Z8NzWS2W2Wrnd/59jZHckiW0Oo6bJUs9syZUtbsAYNP0lXS6DRlVw2qRN1gM+JX1VGAcaAiIICr2v8Cc/DNm3WzeQ0vaSsg9wWGyrhZYwikhqg0SxQ3ov0z3VtVXddbqrmIKeUai2B3DpaCpnZ/+4Nckc9jCyyYgyzOVu/c5uKK1UGV1sUPrmo6IYXN7ZXYH14NcX8nYqAjlomFYIPQkdCRoCsdnbUWHeaivbUDCzFYo4J5aT8GF5TQ9L/KpzI3ttHaB4zdmkwUKEeeU2qlEkJ8wnUUlBo5DVh7Airvhg/EFjSIizQ+hxLyPMwQ8dbEcBxaXAHYk=
