@@ -1,4 +1,3 @@
-const should = require('should');
 const path = require('path');
 const nock = require('nock');
 const fs = require('fs');
@@ -40,7 +39,6 @@ const nockFixtures = {
     nock('https://www.food.ee')
       .get('/api/v2/orders')
       .query(() => true)
-      .times(2)
       .replyWithFile(
         200,
         path.join(__dirname, 'fixtures/nock_foodee_orders_good.json'),
@@ -51,7 +49,6 @@ const nockFixtures = {
     nock('https://www.food.ee')
       .get('/api/v2/orders')
       .query(() => true)
-      .times(2)
       .replyWithFile(
         200,
         path.join(__dirname, 'fixtures/nock_foodee_orders_bad.json')
@@ -64,7 +61,6 @@ const nockFixtures = {
         filter: { uuid: 'b7b18cc6-c95f-42e2-9b99-6c1c93440218' },
         include: 'restaurant'
       })
-      .times(2)
       .replyWithFile(
         200,
         path.join(__dirname, 'fixtures/nock_foodee_order_good.json'),
@@ -82,36 +78,39 @@ describe('foodee', () => {
     const login = await foodee.login();
     writeJSON(login, `lib_foodee_good_login.json`);
     login.should.eql(fixtures.lib_foodee_good_login);
+    expect(nock.pendingMocks()).toEqual([]);
   });
 
-  test(`bad login()`, () => {
+  test(`bad login()`, async () => {
     const foodee = new Foodee({});
     nockFixtures.badSignin();
-    const login = foodee.login();
-    return should(login).be.rejectedWith(Foodee.BadCredentials);
+    await expect(foodee.login()).rejects.toEqual(new Foodee.BadCredentials());
+    expect(nock.pendingMocks()).toEqual([]);
   });
 
   ['good', 'bad'].forEach(async type => {
     describe(`${type} getOrders`, async () => {
-      const foodee = new Foodee({
-        username: 'gavin@example.com',
-        password: 'password'
-      });
       beforeEach(() => {
+        this.foodee = new Foodee({
+          username: 'gavin@example.com',
+          password: 'password'
+        });
         nockFixtures.goodSignin();
         nockFixtures[`${type}Orders`]();
       });
 
       test('getFutureOrders', async () => {
-        const orders = await foodee.getFutureOrders();
+        const orders = await this.foodee.getFutureOrders();
         writeJSON(orders, `lib_foodee_${type}_get_future_orders.json`);
         orders.should.eql(fixtures[`lib_foodee_${type}_get_future_orders`]);
+        expect(nock.pendingMocks()).toEqual([]);
       });
 
       test('getPastOrders', async () => {
-        const orders = await foodee.getPastOrders();
+        const orders = await this.foodee.getPastOrders();
         writeJSON(orders, `lib_foodee_${type}_get_past_orders.json`);
         orders.should.eql(fixtures[`lib_foodee_${type}_get_past_orders`]);
+        expect(nock.pendingMocks()).toEqual([]);
       });
     });
   });
@@ -121,7 +120,7 @@ describe('foodee', () => {
       nockFixtures.goodSignin();
       nockFixtures.goodOrder();
       nock('https://www.food.ee', { encodedQueryParams: true })
-        .get('/api/v3/orders/105425/group-order-members')
+        .get('/api/v3/orders/105423/group-order-members')
         .query({
           page: { limit: 300, offset: 0 },
           include:
@@ -160,6 +159,7 @@ describe('foodee', () => {
       );
       writeJSON(order, 'lib_foodee_good_order.json');
       order.should.eql(fixtures.lib_foodee_good_order);
+      expect(nock.pendingMocks()).toEqual([]);
     });
   });
 });
