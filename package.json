@@ -64,7 +64,7 @@
     "mysql": "^2.11.1",
     "mysql2": "^1.4.1",
     "raven": "^2.0.0",
-    "sequelize": "^4.2.0",
+    "sequelize": "^4.10.1",
     "sqlite3": "^3.1.9"
   },
   "devDependencies": {
