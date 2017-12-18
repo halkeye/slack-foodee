@@ -77,7 +77,7 @@
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^21.0.1",
+    "jest": "^22.0.0",
     "nock": "^9.0.22",
     "nodemon": "^1.12.1",
     "nyc": "^11.2.1",
