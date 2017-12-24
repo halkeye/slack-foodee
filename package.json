@@ -58,7 +58,7 @@
     "grant-express": "^3.7.2",
     "lodash.uniqby": "^4.7.0",
     "memoize": "^0.1.1",
-    "moment": "^2.15.0",
+    "moment": "^2.20.1",
     "moment-timezone": "^0.5.13",
     "morgan": "^1.9.0",
     "mysql": "^2.15.0",
