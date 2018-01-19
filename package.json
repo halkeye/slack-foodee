@@ -53,7 +53,7 @@
     "errorhandler": "^1.4.3",
     "eslint-plugin-async-await": "0.0.0",
     "express": "^4.16.2",
-    "express-promise-router": "^2.0.0",
+    "express-promise-router": "^3.0.1",
     "express-session": "^1.15.6",
     "grant-express": "^3.7.2",
     "lodash.uniqby": "^4.7.0",
