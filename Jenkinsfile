@@ -1,18 +1,28 @@
-node {
-    def app
-    stage('Preparation') { // for display purposes
-        checkout scm
+pipeline {
+    agent any
+
+    options {
+        timeout(time: 10, unit: 'MINUTES')
+        ansiColor('xterm')
     }
-    stage('Build') {
-        wrap([$class: 'AnsiColorBuildWrapper']) {
-            app = docker.build("halkeye/slack-foodee:${BUILD_NUMBER}")
-            app.tag("latest")
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker build -t halkeye/slack-foodee .'
+            }
         }
-    }
-    stage('Upload') {
-       withDockerRegistry([credentialsId: 'dockerhub-halkeye']) {
-           app.push("${BUILD_NUMBER}")
-           app.push('latest')
-       }
+
+        stage('Deploy') {
+            when {
+                branch 'master'
+            }
+            environment {
+                DOCKER = credentials('dockerhub-halkeye')
+            }
+            steps {
+                sh 'docker login --username $DOCKER_USR --password=$DOCKER_PSW'
+                sh 'docker push halkeye/slack-foodee'
+            }
+        }
     }
 }
