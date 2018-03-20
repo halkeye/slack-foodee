@@ -68,7 +68,7 @@
     "sqlite3": "^4.0.0"
   },
   "devDependencies": {
-    "codacy-coverage": "^2.0.3",
+    "codacy-coverage": "^2.1.1",
     "env-test": "^1.0.0",
     "eslint": "^4.16.0",
     "eslint-config-standard": "^11.0.0",
