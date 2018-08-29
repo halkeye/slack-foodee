@@ -131,22 +131,6 @@ describe('foodee', () => {
           path.join(__dirname, 'fixtures/nock_foodee_group_members.json'),
           { 'Content-Type': 'application/json' }
         );
-
-      nock('https://www.food.ee', { encodedQueryParams: true })
-        .get('/api/v3/restaurants/10/menus')
-        .query({
-          filter: { active: true },
-          include:
-            'menu-groups.menu-items.dietary-tags,restaurant,menu-groups.menu-items.menu-option-groups.menu-option-items'
-        })
-        .replyWithFile(
-          200,
-          path.join(
-            __dirname,
-            'fixtures/nock_foodee_restaurants_616_menus.json'
-          ),
-          { 'Content-Type': 'application/json' }
-        );
     });
 
     const foodee = new Foodee({
