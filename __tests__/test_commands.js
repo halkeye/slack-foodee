@@ -112,57 +112,102 @@ describe('commands', () => {
       };
 
       const results = await testContext.commands.date('2016-09-19');
-      expect(results).toEqual({
-        response_type: 'in_channel',
-        attachments: [
-          {
-            author_name: "Finch's Teahouse",
-            fields: [
-              {
-                title: 'Bearded Man',
-                value: 'Mandu\nSpicy Pork Burrito',
-                short: true
-              },
-              { title: 'Darth Maul', value: 'Bulgogi Burrito', short: true },
-              {
-                title: 'Person 1',
-                value: 'Chicken Mayo Bibimbap\nMandu',
-                short: true
-              },
-              {
-                title: 'Person 2',
-                value: 'BBQ Short Rib Burrito \nChicken Mayo Bibimbap',
-                short: true
-              },
-              {
-                title: 'Person 3',
-                value: 'Corn Chips \nSalsa\nVegetarian Bibimbap',
-                short: true
-              },
-              {
-                title: 'Person 4',
-                value: 'Chicken Mayo Bibimbap\nCorn Chips ',
-                short: true
-              },
-              {
-                title: 'Person 5',
-                value: 'Mandu\nSpicy Pork Burrito',
-                short: true
-              },
-              {
-                title: 'Person 6',
-                value: 'Bulgogi Burrito\nMandu',
-                short: true
-              },
-              { title: 'Person 7', value: 'Spicy Pork Burrito', short: true }
-            ],
-            pretext: '2016-09-19',
-            thumb_url:
-              'https://uploads.food.ee/uploads/images/restaurants/full_Finches02.jpg',
-            ts: 1502909100
-          }
-        ]
-      });
+      expect(results).toEqual(
+
+        {
+          'attachments': [
+            {
+              'author_name': "Finch's Teahouse",
+              'fields': [
+                {
+                  'short': true,
+                  'title': 'User 1',
+                  'value': 'Cajun Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 10',
+                  'value': 'Veggie Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 11',
+                  'value': 'Chicken Tenders (Serves 2-3)\nGood Drink Mango Iced Tea'
+                },
+                {
+                  'short': true,
+                  'title': 'User 12',
+                  'value': 'Cajun Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 13',
+                  'value': 'Chicken Tenders (Serves 2-3)\nCultery\nGarlic Bread\nPlates'
+                },
+                {
+                  'short': true,
+                  'title': 'User 14',
+                  'value': 'Cajun Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 15',
+                  'value': 'Beef Dip'
+                },
+                {
+                  'short': true,
+                  'title': 'User 16',
+                  'value': 'Maple Salmon Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 2',
+                  'value': 'Caesar Salad '
+                },
+                {
+                  'short': true,
+                  'title': 'User 3',
+                  'value': 'Perogies '
+                },
+                {
+                  'short': true,
+                  'title': 'User 4',
+                  'value': 'Cajun Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 5',
+                  'value': 'Pulled Pork Sandwich'
+                },
+                {
+                  'short': true,
+                  'title': 'User 6',
+                  'value': '2x Good Drink Mango Iced Tea\nFish Tacos  (Serves 2-3)'
+                },
+                {
+                  'short': true,
+                  'title': 'User 7',
+                  'value': 'Veggie Burger'
+                },
+                {
+                  'short': true,
+                  'title': 'User 8',
+                  'value': 'Shrimp & Avocado Wrap'
+                },
+                {
+                  'short': true,
+                  'title': 'User 9',
+                  'value': 'Quinoa'
+                }
+              ],
+              'pretext': '2016-09-19',
+              'thumb_url': 'https://uploads.food.ee/uploads/images/restaurants/full_Finches02.jpg',
+              'ts': 1502909100
+            }
+          ],
+          'response_type': 'in_channel'
+        }
+      );
     });
   });
 });

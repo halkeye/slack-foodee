@@ -9,6 +9,10 @@ Hacky little slack integration we use at saucelabs to list out what we order on 
 
 `npm run dev`
 
+Optional:
+
+Set env RECORD_ORDERS_JSON to a truth value to record the orders rest json call
+
 ## Start real server
 
 `npm run start`
