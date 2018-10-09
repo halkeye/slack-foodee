@@ -1,3 +1,5 @@
+# Note: A code change in v2 of the foodee api broke things, and I havn't had time/interest to upgrade it to v3.
+
 Slack Foodee
 ============
 [![Build Status](https://travis-ci.org/halkeye/slack-foodee.svg?branch=master)](https://travis-ci.org/halkeye/slack-foodee)
